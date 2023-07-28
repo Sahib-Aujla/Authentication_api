@@ -64,7 +64,8 @@ app.post("/api/user/login", (req, res) => {
       res.json({ message: "login successful", token: token });
     })
     .catch((msg) => {
-      res.status(422).json({ message: "Unable to find user" });
+      console.log(msg);
+      res.status(422).json({ message: msg });
     });
 });
 
